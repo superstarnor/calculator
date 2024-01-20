@@ -1,0 +1,7 @@
+# this file is used to refer and add updates to projects
+
+---UPDATES----
+1. keep calculator running until user quits
+2. Logical operations
+3. turtle based front end
+4. Make a claculator website

@@ -1,6 +1,4 @@
 
-
-
 def add(n1,n2):
     return n1+n2
 
@@ -14,21 +12,34 @@ def divide(n1,n2):
 
 
 def calculator():
-    print("welcome to our homemade calculator")
-    print("You would choose two number and choose an operation")
-    num1 = int(input("Choose a number"))
-    num2 = int(input("chose another number"))
-    op = input("choose 1 - add, 2 - subtract, 3 - multiply, 4 - divide")
-    if op == "1":
-        return add(num1,num2)
-    elif op == "2":
-        return subtract(num1,num2)
-    elif op == "3":
-        return multiply(num1,num2)
-    elif op == "4":
-        return divide(num1,num2)
+    print("Welcome to Super Calculator, lets do some computing...\n")
+    to_continue = True
+    total = 0
+    n1 = int(input("First, choose a number"))
+    
+    while to_continue != False:
+        
+        
+        op = int(input("1 - add, 2 - sub, 3 - multply, 4 - divide"))
+        n2 = int(input("choose another number"))
 
-    else:
-        return "Not chosen valid operation"
+        if op == 1:
+            total = add(n1,n2)
+            print(total)
+        elif op == 2:
+            total += subtract(n1,n2)
+            print(total)
+        elif op == 3:
+            total += multiply(n1,n2)
+            print(total)
+        elif op == 4:
+            total += divide(n1,n2)
+            print(total)
+        
+        choice = input("Do you wanted to continue? Y or N")
+    
+        if choice == "N":
+            to_continue = False
+        
 
 print(calculator())
